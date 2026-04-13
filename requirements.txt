@@ -1,0 +1,5 @@
+streamlit
+google-generativeai
+graphviz
+firebase-admin
+python-docx
