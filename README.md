@@ -6,7 +6,7 @@ This project addresses the "black box" problem in AI-based psychological assessm
 
 ✨ Key Features
 
-Automated Transcript Processing: Parses raw therapy transcripts (.docx) into structured clinical summaries using LLMs.
+Automated Transcript Processing: Parses raw therapy transcripts (.docx, .txt) into structured clinical summaries using LLMs.
 
 Interpretable AI (SCRDR): Classifies summaries using a binary decision tree where every conclusion is traceable to specific human-verified rules.
 
@@ -52,7 +52,7 @@ Firebase Service Account: A Firebase project with Firestore enabled, and a gener
 
 1. Clone the repository
 
-git clone [https://github.com/Adyboy1/RDR-for-Psychology_testing.git]
+git clone [https://github.com/yourusername/clinical-rdr-engine.git](https://github.com/yourusername/clinical-rdr-engine.git)
 cd clinical-rdr-engine
 
 
@@ -83,31 +83,43 @@ touch .streamlit/secrets.toml
 
 Copy the following template and fill in your specific details:
 
-# .streamlit/secrets.toml
+.streamlit/secrets.toml
 
-# --- APPLICATION SETTINGS ---
 [general]
-# Change this ID for different deployments/organizations!
-# This determines the Firestore collection where data is stored.
-# e.g., "Org_A_Data", "Test_Environment", etc.
+
+Change this ID for different deployments/organizations!
+
+This determines the Firestore collection where data is stored.
+
+e.g., "Org_A_Data", "Test_Environment", etc.
+
 app_id = "Development_Environment"
 
-# --- LLM CONFIGURATION ---
 GEMINI_API_KEY = "your-google-gemini-api-key-here"
 
-# --- FIREBASE SERVICE ACCOUNT ---
-# Paste the values from your downloaded Firebase Admin SDK JSON file here
 [firebase]
+
+Paste the values from your downloaded Firebase Admin SDK JSON file here
+
 type = "service_account"
+
 project_id = "your-firebase-project-id"
+
 private_key_id = "your-private-key-id"
+
 private_key = "-----BEGIN PRIVATE KEY-----\nYOUR...LONG...KEY...HERE\n-----END PRIVATE KEY-----\n"
+
 client_email = "firebase-adminsdk-xxxxx@your-project.iam.gserviceaccount.com"
+
 client_id = "1234567890"
-auth_uri = "[https://accounts.google.com/o/oauth2/auth]"
-token_uri = "[https://oauth2.googleapis.com/token]"
-auth_provider_x509_cert_url = "[https://www.googleapis.com/oauth2/v1/certs]"
-client_x509_cert_url = "[https://www.googleapis.com/robot/v1/metadata/x509/your-service-account]"
+
+auth_uri = "[https://accounts.google.com/o/oauth2/auth](https://accounts.google.com/o/oauth2/auth)"
+
+token_uri = "[https://oauth2.googleapis.com/token](https://oauth2.googleapis.com/token)"
+
+auth_provider_x509_cert_url = "[https://www.googleapis.com/oauth2/v1/certs](https://www.googleapis.com/oauth2/v1/certs)"
+
+client_x509_cert_url = "[https://www.googleapis.com/robot/v1/metadata/x509/your-service-account](https://www.googleapis.com/robot/v1/metadata/x509/your-service-account)"
 
 
 🏃‍♂️ Running the Application
