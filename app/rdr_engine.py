@@ -118,7 +118,7 @@ class RDREngine:
         while current_node:
             last_tried_node = current_node
             condition = current_node.vertex.rule.conditions
-            is_true = llm_check_condition(condition, current_patient_summary)
+            is_true = llm_check_condition(current_patient_summary,condition)
 
             if is_true:
                 last_true_node = current_node
